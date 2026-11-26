@@ -1,0 +1,393 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #19352a;
+  background: #f7f9f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  height: 82px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #e8eee8;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: #14532d;
+  color: white;
+}
+
+.brand strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.brand small {
+  display: block;
+  margin-top: 4px;
+  color: #718078;
+  font-size: 11px;
+}
+
+.nav-label {
+  color: #42634e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero {
+  min-height: 420px;
+  padding: 70px 8%;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(10, 47, 28, .96), rgba(16, 75, 43, .83)),
+    url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?w=1800')
+    center/cover;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #b8d9bd;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  max-width: 700px;
+  margin: 18px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.hero p {
+  max-width: 570px;
+  color: #e0eee3;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px 23px;
+  border-radius: 9px;
+  background: #e5b94c;
+  color: #26351d;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.catalog {
+  max-width: 1320px;
+  margin: auto;
+  padding: 75px 6%;
+}
+
+.section-heading h2 {
+  margin: 10px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 30px;
+}
+
+.section-heading p {
+  color: #78847c;
+  margin: 0;
+}
+
+.section-heading .eyebrow {
+  color: #39804d;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 13px;
+  margin: 32px 0 45px;
+}
+
+.search-box,
+.filters select {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  border: 1px solid #e1e8e1;
+  border-radius: 9px;
+  background: white;
+  color: #607166;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  color: #19352a;
+}
+
+.filters select {
+  width: 100%;
+  font: inherit;
+  outline: none;
+}
+
+.result-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.result-heading h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.result-heading span {
+  color: #718078;
+  font-size: 13px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  overflow: hidden;
+  border: 1px solid #e9eee8;
+  border-radius: 13px;
+  background: white;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(25, 53, 42, .09);
+}
+
+.product-image {
+  height: 210px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #edf3ed;
+  color: #8ca493;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 17px;
+}
+
+.product-info small {
+  color: #39804d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.product-info h3 {
+  margin: 9px 0 6px;
+  font-size: 16px;
+}
+
+.product-info p {
+  margin: 0 0 13px;
+  color: #849087;
+  font-size: 12px;
+}
+
+.product-info > strong {
+  display: block;
+  color: #176536;
+  font-size: 17px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 14px;
+  color: #7b887f;
+  font-size: 12px;
+}
+
+.empty-state {
+  min-height: 230px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  border: 1px dashed #cbd8cb;
+  border-radius: 13px;
+  background: white;
+  color: #718078;
+}
+
+.empty-state h3 {
+  margin: 5px 0 0;
+  color: #294d36;
+}
+
+.empty-state p {
+  max-width: 430px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+footer {
+  padding: 35px 20px;
+  background: #123d28;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin: 8px 0 0;
+  color: #c5d8ca;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search-box {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 72px;
+    padding: 0 5%;
+  }
+
+  .brand strong {
+    font-size: 12px;
+  }
+
+  .brand small {
+    font-size: 10px;
+  }
+
+  .nav-label {
+    display: none;
+  }
+
+  .hero {
+    min-height: 380px;
+    padding: 55px 7%;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .catalog {
+    padding: 50px 5%;
+  }
+
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    grid-column: auto;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-image {
+    height: 150px;
+  }
+
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 14px;
+  }
+
+  .product-info > strong {
+    font-size: 14px;
+  }
+}
