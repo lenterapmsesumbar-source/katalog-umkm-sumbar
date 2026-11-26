@@ -20,7 +20,7 @@ export default function App() {
           supabase.from('kabupaten_kota').select('*').order('nama'),
           supabase
             .from('produk')
-            .select('*, kategori(nama_kategori), umkm!inner(nama_umkm, status_verifikasi, kabupaten_kota(nama))')
+            .select('*, kategori(nama_kategori), umkm!inner(nama_umkm, status_verifikasi, kabupaten_kota_id, kabupaten_kota(id,nama))')
             .eq('status', 'Aktif')
             .eq('umkm.status_verifikasi', 'terverifikasi')
             .order('created_at', { ascending: false })
